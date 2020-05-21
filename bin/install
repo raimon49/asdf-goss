@@ -51,7 +51,7 @@ get_arch() {
     local arch
     if [ "$(uname -m)" = "x86_64" ]; then
         arch="amd64"
-    elif [ "$(uname -m)" = "arch64" ]; then
+    elif [ "$(uname -m)" = "aarch64" ]; then
         arch="arm"
     else
         arch="386"
