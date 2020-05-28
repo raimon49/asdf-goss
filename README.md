@@ -10,6 +10,18 @@
 $ asdf plugin add goss https://github.com/raimon49/asdf-goss.git
 ```
 
+## Usage
+
+```bash
+# Install any version of Goss
+$ asdf install goss v0.3.6
+
+# Set the version of Goss you want
+$ asdf global goss v0.3.6
+$ goss --version
+goss version v0.3.6
+```
+
 ## License
 
 [MIT License](LICENSE)
