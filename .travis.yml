@@ -8,7 +8,7 @@ script:
   - make test
   - asdf plugin-add $GOSS_NAME ./
   - asdf list-all $GOSS_NAME
-  - asdf plugin-test $GOSS_NAME ./ "$TOOL_TEST_COMMAND" --asdf-tool-version $TOOL_VERSION
+  - asdf plugin-test $GOSS_NAME ./ "$TEST_COMMAND" --asdf-tool-version $GOSS_VERSION
 matrix:
   include:
    - os: linux
