@@ -13,3 +13,4 @@ matrix:
   include:
    - os: linux
      arch: amd64
+   - os: osx
