@@ -21,7 +21,7 @@ install_tool() {
     download_path="${tmp_download_dir}/${binary_name}"
 
     echo "Downloading [${binary_name}] from ${download_url} to ${download_path}"
-    curl -sSL -o "${download_path}" "${download_url}"
+    curl -fsSL -o "${download_path}" "${download_url}"
 
     echo "Creating bin directory"
     mkdir -p "${bin_install_path}"
@@ -55,6 +55,10 @@ get_filename() {
     local binary_name="$1"
     local platform="$2"
     local arch_name="$3"
+
+    case $platform in
+        darwin | windows) binary_name="${binary_name}-alpha";;
+    esac
 
     echo "${binary_name}-${platform}-${arch_name}"
 }
