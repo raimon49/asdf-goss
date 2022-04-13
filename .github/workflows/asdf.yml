@@ -20,6 +20,7 @@ jobs:
         uses: asdf-vm/actions/plugin-test@v1
         with:
           command: goss --version
+          version: v0.3.16
   lint:
     runs-on: ubuntu-latest
 
