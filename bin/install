@@ -57,6 +57,8 @@ get_filename() {
     local arch_name="$3"
 
     case $platform in
+        # XXX: The keyword "alpha" is tentative
+        # See also) https://github.com/raimon49/asdf-goss/pull/1
         darwin | windows) binary_name="${binary_name}-alpha";;
     esac
 
