@@ -1,4 +1,4 @@
-name: Main workflow
+name: plugin test
 
 on:
   pull_request:
