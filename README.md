@@ -1,6 +1,6 @@
 # asdf-goss
 
-[![Main workflow](https://github.com/raimon49/asdf-goss/actions/workflows/asdf.yml/badge.svg)](https://github.com/raimon49/asdf-goss/actions/workflows/asdf.yml)
+[![plugin test](https://github.com/raimon49/asdf-goss/workflows/plugin%20test/badge.svg)](https://github.com/raimon49/asdf-goss/actions/workflows/asdf.yml)
 [![Build Status](https://travis-ci.org/raimon49/asdf-goss.svg?branch=master)](https://travis-ci.org/raimon49/asdf-goss)
 
 [Goss](https://goss.rocks) as a server testing tool plugin for [asdf version manager](https://asdf-vm.com/)
