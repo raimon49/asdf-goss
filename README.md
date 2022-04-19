@@ -8,7 +8,7 @@
 ## Installation
 
 ```bash
-$ asdf plugin add goss https://github.com/raimon49/asdf-goss.git
+$ asdf plugin add goss
 ```
 
 ## Usage
