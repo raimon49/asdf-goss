@@ -15,13 +15,15 @@ $ asdf plugin add goss
 
 ```bash
 # Install any version of Goss
-$ asdf install goss v0.3.6
+$ asdf install goss 0.3.6
 
 # Set the version of Goss you want
-$ asdf global goss v0.3.6
+$ asdf global goss 0.3.6
 $ goss --version
 goss version v0.3.6
 ```
+
+**Note:** alpha support for macOS/Windows has been available on a trial basis since v0.3.12. This plugin will be downloaded with the keyword "-alpha" as a definite keyword for now. See also) [P-R #1](https://github.com/raimon49/asdf-goss/pull/1)
 
 ## License
 
