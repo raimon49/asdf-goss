@@ -61,7 +61,7 @@ get_filename() {
     local arch_name="$3"
     local version="$4"
 
-    local numeric_version=$(numeric_version "${version}")
+    local install_numeric_version=$(numeric_version "${version}")
 
     if [ "${install_numeric_version}" -lt "$(numeric_version 0.4.0)" ]; then
         # XXX: The keyword "alpha" is removed in v0.4.0 or later
