@@ -34,6 +34,10 @@ install_tool() {
     chmod +x "${binary_path}"
 }
 
+numeric_version() {
+    echo "$@" | awk -F. '{ printf("%d%03d%03d%03d\n", $1,$2,$3,$4); }'
+}
+
 get_platform() {
     uname | tr '[:upper:]' '[:lower:]'
 }
@@ -55,12 +59,19 @@ get_filename() {
     local binary_name="$1"
     local platform="$2"
     local arch_name="$3"
+    local version="$4"
 
-    case $platform in
-        # XXX: The keyword "alpha" is tentative
-        # See also) https://github.com/raimon49/asdf-goss/pull/1
-        darwin | windows) binary_name="${binary_name}-alpha";;
-    esac
+    local numeric_version=$(numeric_version "${version}")
+
+    if [ "${install_numeric_version}" -lt "$(numeric_version 0.4.0)" ]; then
+        # XXX: The keyword "alpha" is removed in v0.4.0 or later
+        # See also) https://github.com/goss-org/goss/releases/tag/v0.4.0
+        case $platform in
+            # XXX: The keyword "alpha" is tentative
+            # See also) https://github.com/raimon49/asdf-goss/pull/1
+            darwin | windows) binary_name="${binary_name}-alpha";;
+        esac
+    fi
 
     echo "${binary_name}-${platform}-${arch_name}"
 }
@@ -71,7 +82,7 @@ get_download_url() {
     local binary_name="$3"
     local arch_name="$4"
     local filename
-    filename="$(get_filename "${binary_name}" "${platform}" "${arch_name}")"
+    filename="$(get_filename "${binary_name}" "${platform}" "${arch_name}" "${version}")"
 
     local github_repo="aelsabbahy/goss"
 
