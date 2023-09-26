@@ -23,7 +23,7 @@ $ goss --version
 goss version v0.3.6
 ```
 
-**Note:** alpha support for macOS/Windows has been available on a trial basis [since v0.3.12](https://github.com/aelsabbahy/goss/releases/tag/v0.3.12). This plugin will be downloaded with the keyword "-alpha" as a definite keyword for now. See also) [P-R #1](https://github.com/raimon49/asdf-goss/pull/1)
+**Note:** macOS/Windows alpha support is only available on a trial basis from [v0.3.12](https://github.com/aelsabbahy/goss/releases/tag/v0.3.12) to less than [v0.4.0](https://github.com/goss-org/goss/releases/tag/v0.4.0). This plugin will be downloaded with the keyword "-alpha" as a definite keyword for now. See also) [P-R #1](https://github.com/raimon49/asdf-goss/pull/1)
 
 ## License
 
