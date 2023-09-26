@@ -12,6 +12,9 @@ jobs:
         os:
           - macos-latest
           - ubuntu-latest
+        goss-version:
+          - 0.3.16
+          - 0.4.0
 
     runs-on: ${{ matrix.os }}
 
@@ -20,7 +23,7 @@ jobs:
         uses: asdf-vm/actions/plugin-test@v2
         with:
           command: goss --version
-          version: 0.3.16
+          version: ${{ matrix.goss-version }}
   lint:
     runs-on: ubuntu-latest
 
